@@ -27,7 +27,7 @@ COPY --from=builder /app/web/.next/standalone ./
 # Copy static assets (JS chunks, CSS, images) into the expected location
 COPY --from=builder /app/web/.next/static ./.next/static
 # Copy the public directory (favicons, robots.txt, etc.)
-COPY --from=builder /app/web/public ./public
+COPY --from=builder /app/web/public* ./public/
 
 EXPOSE 3000
 
