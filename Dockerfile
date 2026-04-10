@@ -7,7 +7,7 @@ WORKDIR /app
 COPY web/package.json web/package-lock.json* ./web/
 
 # Install production + dev dependencies needed for the build
-RUN cd web && npm ci
+RUN cd web && npm install
 
 # Copy the rest of the web source
 COPY web/ ./web/
